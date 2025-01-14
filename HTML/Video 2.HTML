@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style8.css">
+    <link rel="stylesheet" href="CSS/style2.css">
+    <title>Video Gallery</title>
+</head>
+<body>
+    <header>
+            
+        <div class="wrapper">
+           <div class="logo">
+               <img src="Picture/_24_r-png_letter-r-png-r-logo-no-background-png-image-with-transparent-background-png-free-png-images-letter-r-alphabet-letters-design-photography-logo-design.png" alt="Logo R 1 " width="90" height="90">
+           </div>
+           <ul class="nav-area">
+                <!-- <a> is a anchor tag that links to other webpage -->
+    
+      <ul>
+        <button style="height: 25px; width: 100px;"><li><a href="Index.html">Index</a></li></button>
+        <button style="height: 25px; width: 100px;" ><li><a href="Home.html">Home</a></li></button>
+        <button style="height: 25px; width: 100px;"><li><a href="Picrure's.html">picture</a></li></button>
+        <button style="height: 25px; width: 100px;"><li><a href="Video.html">Video</a></li></button>
+        <button style="height: 25px; width: 100px;"><li><a href="Video 2.HTML">Video 2</a></li></button>
+        <button style="height: 25px; width: 100px;"><li><a href="Music.html">Music</a></li></button>
+        
+      </ul>
+      <Center><h1 style="color: white;">spider man remastered gameplay </h1></Center>
+    <div class="container">
+        <div class="videos">
+            <video class="active" src="./Video/SPIDER-MAN REMASTERED PC Gameplay Walkthrough Part 1 FULL GAME [4K 60FPS ULTRA] - No Commentary.mp4" muted></video>
+            <video src="./video/SPIDER-MAN REMASTERED PC Gameplay Walkthrough Part 2 [4K 60FPS RAY TRACING] - No Commentary.mp4" muted></video>
+            <video src="./Video/SPIDER-MAN REMASTERED PC Gameplay Walkthrough Part 3 [4K 60FPS RAY TRACING] - No Commentary.mp4" muted></video>
+            <video src="./Video/SPIDER-MAN REMASTERED PC ENDING Gameplay Walkthrough Part 4 [4K 60FPS RAY TRACING].mp4" muted></video>
+        </div>
+        <div class="main-video">
+            <video src="./Video/SPIDER-MAN REMASTERED PC Gameplay Walkthrough Part 1 FULL GAME [4K 60FPS ULTRA] - No Commentary.mp4" unmuted controls autoplay></video>
+        </div>
+    </div>
+
+    <!-- jquery cdn link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+
+        $(document).ready(function(){
+
+            $('.videos video').click(function(){
+
+                $(this).addClass('active').siblings().removeClass('active');
+
+                var src = $(this).attr('src');
+                $('.main-video video').attr('src',src);
+            });
+        });
+
+    </script>
+
+</body>
+</html>
